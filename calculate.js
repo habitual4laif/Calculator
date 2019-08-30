@@ -12,7 +12,7 @@ var pendingVal;
 var arithmeticStrArray = [];
 
 //Function for the numbers
-function updateDisplayVal (linkItThru){
+function numberDisplay (linkItThru){
     var butText = linkItThru.target.innerText;
     
     if(worksheetDisplay === '0'){
@@ -22,7 +22,7 @@ function updateDisplayVal (linkItThru){
     worksheet.innerText = worksheetDisplay;   
 }
 
-
+//Function for operators
 function performOperation (linkItThru){
     var perform = linkItThru.target.innerText;
     
@@ -70,7 +70,7 @@ function performOperation (linkItThru){
 }
 
 for (let i = 0; i < buttons.length; i++)   {
-    buttons[i].addEventListener('click', updateDisplayVal, false);
+    buttons[i].addEventListener('click', numberDisplay, false);
 } 
 
 for (let i = 0; i < buttonSign.length; i++)   {
